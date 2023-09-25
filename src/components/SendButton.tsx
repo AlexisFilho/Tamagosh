@@ -1,5 +1,6 @@
 import React from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
+
 import { Colors } from "react-native/Libraries/NewAppScreen";
 
 const styles = StyleSheet.create({
@@ -28,7 +29,9 @@ const SendButton = () => {
             style = {({pressed}) => [
                 styles.button,
                 pressed && {opacity: 0.8}
-            ]}>
+                
+            ]}
+            >
 
             {({pressed}) => {
                 return(

@@ -1,5 +1,6 @@
 import React from "react";
-import { SafeAreaView,StyleSheet,Text,TextInput, View } from "react-native";
+import { SafeAreaView,StyleSheet,Text,TextInput, View, Button } from "react-native";
+
 import SendButton from "../components/SendButton";
 import {Input, Password} from "../components/Input";
 
@@ -14,7 +15,7 @@ const styles = StyleSheet.create({
 
 });
 
-const Login = () => {
+const Login = ({ navigation }:any) => {
     return (
         <SafeAreaView>
             <View
@@ -25,7 +26,10 @@ const Login = () => {
                 <Password placeholder="Senha"/>
                 
                 
-                <SendButton/>
+                <Button
+                    onPress={() => navigation.navigate("Home")}
+                    title="Entrar"
+                />
             </View>
             
             
